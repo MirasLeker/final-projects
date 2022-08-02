@@ -1,50 +1,114 @@
-<!DOCTYPE html>
+<! Get me @ www.github.com/anoopknr  >
+<html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
-  <title>ScoreBoard</title>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
+    <meta name="author" content="Anoop Varghese">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <! Title of the Game   >
+    <title> FOOTBALL SCOREBOARD </title>
+
+    <! Java Script for Fireworks (Depantancy File)  >
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+
+    <! stylesheet of the page edit this for any UI change   >
+    <link rel="stylesheet" href="css/style.css">
+
+
+    <script language="JavaScript">
+        function game{
+            same = false;
+var r = 0;
+tbl = document.getElementById("matrix");
+//alert(tbl.rows.length);
+
+for(r = 0; r < tbl.rows.length; r++) {
+    // alert('Bob');
+    var _tempmg = tbl.rows[r].cells[col].childNodes[0].src;
+    alert(_tempmg);
+    if (!_tempmg) break;
+    if (_img.src != _tempmg) break;
+    same = true;
+}
+
+if (r == tbl.rows.length && same) {
+    alert(_img.src + "won");
+    return;
+}
+
+same = false;
+...
+        }
+    </script>
 </head>
+
 <body>
-  <div class="main">
-    <div class="navbar">
-        <div class="icon">
-            <h2 class="logo">ScoreBoard</h2>
-        </div>
-
-        <div class="menu">
-            <ul>
-                <li><a href="index.html">LIVE</a></li>
-                <li><a href="info.html">INFORMATION</a></li>
-                <li><a href="contact.html">CONTACT</a></li>
-            </ul>
-        </div>
-
-  <div class="container">
-    <h1>ScoreBoard</h1>
-    <div class="title-box">
-        <p>Local Team</p>
-        <p id=" ">45'</p>
-        <p>Visitor Team</p>
-    </div>
-    <div class="title-box">
-        <div class="team">
-            <img  src="https://upload.wikimedia.org/wikipedia/ru/thumb/3/3d/FC_Paris_Saint-Germain_Logo.png/200px-FC_Paris_Saint-Germain_Logo.png" alt="PSG" >
-            <p id="homeName">PSG</p>
-        </div>
-        <p id="goals">3  -  1</p>
-        <div class="team">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/Borussia_Dortmund_logo.svg/800px-Borussia_Dortmund_logo.svg.png" alt="BVB">
-            <p id="awayName">BVB</p>
-        </div>
-         
-    </div>
-    <hr>
-    <div id="matchTable" class="matches-table">
-    </div>
-</div> 
-<scipt src="script.js"></scipt>
+    <div class="main">
+        <div class="navbar">
+            <div class="icon">
+                <h2 class="logo">ScoreBoard</h2>
+            </div>
+    
+            <div class="menu">
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                </ul>
+            </div>
+            <table class="matrix">
+                <div class="container">
+                    <h1>ScoreBoard</h1>
+                    <div class="title-box">
+                        <p>Team One</p>
+                        <p id="elapsed">45'</p>
+                        <p>Team two</p>
+                    </div>
+                    <div class="title-box">
+                        <div class="team">
+                            <p id="team1"><textarea rows="10" cols="15" name="name1"></textarea></p>
+                        </div>
+                        <div class="goals1">
+                            <p id="goals1">
+                                <p>Goals</p>
+                                <textarea rows="1" cols="5" name="goals1"></textarea>
+                            </p>
+                        </div>
+                        <div class="goals2">
+                            <p id="goals2">
+                                <p>Goals</p>
+                                <textarea rows="1" cols="5" name="goals2"></textarea>
+                            </p>
+                        </div>
+                        <div class="team">
+                            <p id="team2"><textarea rows="10" cols="15" name="name2"></textarea></p>
+                        </div>
+                         
+                    </div>
+                    <p><input type="submit" value="Get winner"></p>
+                </table>
+                <hr>
+                <div id="matchTable" class="matches-table">
+    
+                </div>
+            </div>
 </body>
+
+
+<! Java Script for Fireworks (Depantancy File)  >
+<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script src='http://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js'></script>
+<script src='http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js'></script>
+<script src='http://jackrugile.com/lab/fireworks-v2/js/dat.gui.min.js'></script>
+<script src="js/fireworks.js"></script>
+
 </html>
+<script language="JavaScript">
+    getgoal();
+    document.getElementById("name1").innerHTML = team1;
+    document.getElementById("name2").innerHTML = team2;
+</script>
